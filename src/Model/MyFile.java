@@ -88,6 +88,9 @@ public class MyFile {
         return this.path.equals(otherMyFile.path);
     }
 
+    /**
+     * Проверят если данный файл в списке файлов
+     */
     private boolean isMyFileInArray(ArrayList<MyFile> myFiles) {
         for (var myfile :
                 myFiles) {
@@ -99,6 +102,9 @@ public class MyFile {
     }
 
 
+    /**
+     * заполняет список всех файлов на которые ссылается данный файл
+     */
     public void fillFilesAbove(List<MyFile> allMyFiles, String rootFolderStr) {
         MyFile myFile;
         for (var pathFileAbove :
@@ -110,6 +116,9 @@ public class MyFile {
         }
     }
 
+    /**
+     * Проверяет останется ли список отсортированным если к нему снизу добавить данный файл
+     */
     public boolean isAbleToAddMyFile(ArrayList<MyFile> allMyFilesSorted) {
         for (var fileAbove :
                 filesAbove) {

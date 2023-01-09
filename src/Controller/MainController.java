@@ -28,6 +28,9 @@ public class MainController {
         allMyFiles = new ArrayList<>();
     }
 
+    /*
+    * главный метод в котором происходят все основные шаги программы
+     */
     public void begin() {
         rootFolder = userInterface.askRootFolder();
         rootFolderStr = rootFolder.getAbsolutePath();
@@ -110,6 +113,10 @@ public class MainController {
         }
     }
 
+    /**
+     * Добавляет к AllMyFilesSorted снизу один подходящий myFile из allMyFilesCopy
+     * А если не может добавить такой майфайл чтоб AllMyFilesSorted остался отсортированным то кидает исключение
+     */
     private void addOneToAllMyFilesSorted() throws SortMyFilesException {
         for (var myFile :
                 allMyFilesCopy) {
