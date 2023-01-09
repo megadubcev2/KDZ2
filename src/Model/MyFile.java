@@ -34,6 +34,10 @@ public class MyFile {
         return null;
     }
 
+    /**
+     * удаляет myFile из myFiles
+     * если его нет там то ничего не делает
+     */
     public static void removeMyFile(List<MyFile> myFiles, MyFile myFile) {
         int myFilesLen = myFiles.size();
         for (int i = 0; i < myFilesLen; i++) {
